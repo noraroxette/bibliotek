@@ -13,7 +13,7 @@ export function Header({ view, setView, totalBooks, dark, setDark }: HeaderProps
     <header className="bg-leather-dark dark:bg-[#111] text-warm-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 cursor-pointer" onClick={() => setView('stats')}>
             <span className="text-4xl leading-none">📚</span>
             <div>
                 <h1 className="text-xl sm:text-2xl font-serif font-semibold text-warm-white">
