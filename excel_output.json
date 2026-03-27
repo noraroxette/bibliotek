@@ -1,0 +1,381 @@
+{
+  "sheets": [
+    "Bibliotek",
+    "Stats dashboard",
+    "Antall bøker etter forfatter",
+    "Antall bøker",
+    "Bøker lest (Sara)",
+    "Bøker lest (Sara)- prosent",
+    "Bøker lest (Nora)",
+    "Antall bøker etter språk",
+    "Ark 3"
+  ],
+  "Bibliotek": {
+    "rows": 1038,
+    "headers": [
+      "Tittel",
+      "Forfatter",
+      "Sjanger",
+      "Språk",
+      "Eierform",
+      "Kjøpt",
+      "\"Eier\"",
+      "Notater",
+      "Lest Nora",
+      "Lest Sara"
+    ],
+    "sample": [
+      [
+        "Tittel",
+        "Forfatter",
+        "Sjanger",
+        "Språk",
+        "Eierform",
+        "Kjøpt",
+        "\"Eier\"",
+        "Notater",
+        "Lest Nora",
+        "Lest Sara"
+      ],
+      [
+        "Call Me By Your Name",
+        "Aciman, André",
+        "LGBTQ",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        true,
+        false
+      ],
+      [
+        "Watership Down",
+        "Adams, Richard",
+        null,
+        "English",
+        "Fysisk",
+        null,
+        "Nora Rydding",
+        null,
+        false,
+        false
+      ],
+      [
+        "The List",
+        "Adegoke, Yomi",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        "Nora Rydding",
+        null,
+        true,
+        false
+      ],
+      [
+        "Simon vs. the Homo Sapiens Agenda",
+        "Albertalli, Becky",
+        "Roman, LGBTQ, YA",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "Little Women",
+        "Alcott, Louisa May",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "Lost Boy Found",
+        "Alexander, Kirsten",
+        null,
+        "English",
+        null,
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "Bitter Orange Tree",
+        "Alharti, Jokha",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "Our Wives Under The Sea",
+        "Armfield, Julia",
+        "Roman, LGBTQ",
+        "English",
+        "Fysisk",
+        null,
+        "Sara Rydding",
+        null,
+        true,
+        true
+      ],
+      [
+        "Mickey 7",
+        "Ashton, Edward",
+        "Sci-Fi",
+        "English",
+        "Fysisk",
+        45713,
+        "Sara Rydding",
+        null,
+        false,
+        false
+      ],
+      [
+        "Foundation",
+        "Asimov, Isaac",
+        "Sci-Fi",
+        "English",
+        "Fysisk",
+        null,
+        "Sara Rydding",
+        null,
+        false,
+        false
+      ],
+      [
+        "The Handmaid's Tale",
+        "Atwood, Margaret",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        "Nora Rydding",
+        null,
+        true,
+        true
+      ],
+      [
+        "Sense and Sensibility",
+        "Austen, Jane",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "Giovanni's Room",
+        "Baldwin, James",
+        "Roman, LGBTQ",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        true,
+        true
+      ],
+      [
+        "Snap",
+        "Bauer, Belinda",
+        "Thriller",
+        "English",
+        "Fysisk",
+        null,
+        "Sara Rydding",
+        null,
+        false,
+        false
+      ],
+      [
+        "Cinderella is Dead",
+        "Bayron, Kalynn",
+        "Fantasy, LGBTQ",
+        "English",
+        "Fysisk",
+        null,
+        "Sara Rydding",
+        null,
+        false,
+        true
+      ],
+      [
+        "lie with me",
+        "Besson, Philippe",
+        "Roman, LGBTQ, Romance",
+        "English",
+        "Fysisk",
+        null,
+        "Nora Rydding",
+        null,
+        true,
+        true
+      ],
+      [
+        "And Then She Kissed Me",
+        "Bliss, Harper",
+        "LGBTQ",
+        "English",
+        "Kindle",
+        null,
+        "Nora Rydding",
+        null,
+        true,
+        false
+      ],
+      [
+        "Welcome to the Hyunam-Dong Bookshop",
+        "Bo-Reum Hwang",
+        "Roman",
+        "English",
+        "Fysisk",
+        null,
+        null,
+        null,
+        false,
+        false
+      ],
+      [
+        "World War Z",
+        "Brooks, Max",
+        "Roman, Thriller",
+        "Norsk",
+        "Fysisk",
+        null,
+        "Nora Rydding",
+        "gave",
+        false,
+        false
+      ]
+    ]
+  },
+  "Stats dashboard": {
+    "rows": 1000,
+    "headers": [],
+    "sample": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "hvilken sjanger vi har mest av"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  "Antall bøker etter forfatter": {
+    "rows": 0,
+    "sample": []
+  },
+  "Antall bøker": {
+    "rows": 0,
+    "sample": []
+  },
+  "Bøker lest (Sara)": {
+    "rows": 2,
+    "headers": [
+      "Totalt prosentandel lest="
+    ],
+    "sample": [
+      [
+        "Totalt prosentandel lest="
+      ],
+      []
+    ]
+  },
+  "Bøker lest (Sara)- prosent": {
+    "rows": 0,
+    "sample": []
+  },
+  "Bøker lest (Nora)": {
+    "rows": 0,
+    "sample": []
+  },
+  "Antall bøker etter språk": {
+    "rows": 0,
+    "sample": []
+  },
+  "Ark 3": {
+    "rows": 15,
+    "headers": [
+      "Teammedlem",
+      "Team",
+      "Rolle",
+      "Status",
+      "Merknader"
+    ],
+    "sample": [
+      [
+        "Teammedlem",
+        "Team",
+        "Rolle",
+        "Status",
+        "Merknader"
+      ],
+      [
+        null,
+        "Team 1",
+        null,
+        "Ledig"
+      ],
+      [
+        null,
+        "Team 2",
+        null,
+        "Har båndbredde"
+      ],
+      [
+        null,
+        "Team 3",
+        null,
+        "Tilordnet"
+      ],
+      [
+        null,
+        "Team 4"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  }
+}

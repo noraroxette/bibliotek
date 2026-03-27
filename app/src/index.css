@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-cream: #faf7f2;
+  --color-warm-white: #f5f0e8;
+  --color-sand: #e8dfd3;
+  --color-leather: #8b6f47;
+  --color-leather-dark: #6b5233;
+  --color-ink: #2c2416;
+  --color-ink-light: #5a4e3c;
+  --color-sage: #7d8c6e;
+  --color-sage-light: #a3b091;
+  --color-burgundy: #7a3b3b;
+  --color-navy: #3b4a6b;
+  --color-gold: #c4a35a;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  margin: 0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dark body {
+  background-color: #1a1a1a;
+  color: #e0dcd5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-leather);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #222;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #444;
+}
