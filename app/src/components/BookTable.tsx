@@ -89,12 +89,24 @@ export function BookTable({ books }: BookTableProps) {
                   <td className="px-4 py-2.5">
                     <div className="flex items-center justify-center gap-2">
                       <div className="flex items-center gap-1" title="Nora">
-                        <div className={`w-2 h-2 rounded-full ${book.lestNora ? 'bg-sage' : 'bg-sand'}`} />
-                        <span className={`text-xs hidden lg:inline ${book.lestNora ? 'text-sage font-medium' : 'text-ink-light/40'}`}>N</span>
+                        {book.lestNora ? (
+                          <svg className="w-3.5 h-3.5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <div className="w-2 h-2 rounded-full bg-sand" />
+                        )}
+                        <span className={`text-xs hidden lg:inline ${book.lestNora ? 'text-sage font-medium' : 'text-ink-light/40'}`}>Nora</span>
                       </div>
                       <div className="flex items-center gap-1" title="Sara">
-                        <div className={`w-2 h-2 rounded-full ${book.lestSara ? 'bg-sage' : 'bg-sand'}`} />
-                        <span className={`text-xs hidden lg:inline ${book.lestSara ? 'text-sage font-medium' : 'text-ink-light/40'}`}>S</span>
+                        {book.lestSara ? (
+                          <svg className="w-3.5 h-3.5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <div className="w-2 h-2 rounded-full bg-sand" />
+                        )}
+                       <span className={`text-xs hidden lg:inline ${book.lestSara ? 'text-sage font-medium' : 'text-ink-light/40'}`}>Sara</span>
                       </div>
                     </div>
                   </td>

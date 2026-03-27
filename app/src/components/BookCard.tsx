@@ -72,13 +72,25 @@ export function BookCard({ book }: BookCardProps) {
       {/* Read status */}
       <div className="flex items-center gap-3 mt-3 pt-3 border-t border-sand/30 dark:border-white/10">
         <div className="flex items-center gap-1.5">
-          <div className={`w-2 h-2 rounded-full ${readByNora ? 'bg-sage' : 'bg-sand'}`} />
+          {readByNora ? (
+            <svg className="w-3.5 h-3.5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            <div className="w-2 h-2 rounded-full bg-sand" />
+          )}
           <span className={`text-xs ${readByNora ? 'text-sage font-medium' : 'text-ink-light/50'}`}>
             Nora
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className={`w-2 h-2 rounded-full ${readBySara ? 'bg-sage' : 'bg-sand'}`} />
+          {readBySara ? (
+            <svg className="w-3.5 h-3.5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            <div className="w-2 h-2 rounded-full bg-sand" />
+          )}
           <span className={`text-xs ${readBySara ? 'text-sage font-medium' : 'text-ink-light/50'}`}>
             Sara
           </span>
