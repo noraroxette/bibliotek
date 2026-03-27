@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Book, SortField, SortDirection } from '../types'
 import { BookCard } from './BookCard'
+import { BookTable } from './BookTable'
 import { Filters } from './Filters'
 
 interface LibraryProps {
@@ -20,6 +21,7 @@ export function Library({ books, genres, languages, owners, formats }: LibraryPr
   const [readFilter, setReadFilter] = useState<'' | 'nora' | 'sara' | 'both' | 'unread'>('')
   const [sortField, setSortField] = useState<SortField>('tittel')
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc')
+  const [listView, setListView] = useState<'grid' | 'table'>('grid')
 
   const filteredBooks = useMemo(() => {
     let result = books
@@ -111,6 +113,37 @@ export function Library({ books, genres, languages, owners, formats }: LibraryPr
         clearFilters={clearFilters}
       />
 
+      <div className="flex justify-end mt-4">
+        <div className="flex gap-1 bg-sand/20 dark:bg-white/5 rounded-lg p-1">
+          <button
+            onClick={() => setListView('grid')}
+            title="Rutenett"
+            className={`p-1.5 rounded-md transition-all cursor-pointer ${
+              listView === 'grid'
+                ? 'bg-white dark:bg-white/15 text-ink dark:text-[#e0dcd5] shadow-sm'
+                : 'text-ink-light/50 hover:text-ink-light dark:hover:text-[#999]'
+            }`}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+          </button>
+          <button
+            onClick={() => setListView('table')}
+            title="Tabell"
+            className={`p-1.5 rounded-md transition-all cursor-pointer ${
+              listView === 'table'
+                ? 'bg-white dark:bg-white/15 text-ink dark:text-[#e0dcd5] shadow-sm'
+                : 'text-ink-light/50 hover:text-ink-light dark:hover:text-[#999]'
+            }`}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
       {filteredBooks.length === 0 ? (
         <div className="text-center py-16">
           <svg className="w-16 h-16 mx-auto text-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,12 +152,14 @@ export function Library({ books, genres, languages, owners, formats }: LibraryPr
           <p className="mt-4 text-ink-light text-lg">Ingen bøker funnet</p>
           <p className="text-ink-light/60 text-sm mt-1">Prøv å endre filtrene dine</p>
         </div>
-      ) : (
+      ) : listView === 'grid' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {filteredBooks.map((book, i) => (
             <BookCard key={`${book.tittel}-${book.forfatter}-${i}`} book={book} />
           ))}
         </div>
+      ) : (
+        <BookTable books={filteredBooks} />
       )}
     </div>
   )

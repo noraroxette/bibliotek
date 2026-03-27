@@ -78,8 +78,8 @@ export function BookCard({ book }: BookCardProps) {
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className={`w-2 h-2 rounded-full ${readBySara ? 'bg-navy' : 'bg-sand'}`} />
-          <span className={`text-xs ${readBySara ? 'text-navy font-medium' : 'text-ink-light/50'}`}>
+          <div className={`w-2 h-2 rounded-full ${readBySara ? 'bg-sage' : 'bg-sand'}`} />
+          <span className={`text-xs ${readBySara ? 'text-sage font-medium' : 'text-ink-light/50'}`}>
             Sara
           </span>
         </div>
