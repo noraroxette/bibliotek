@@ -83,31 +83,31 @@ export default function App() {
       b.sjanger.split(',').map(g => g.trim()).filter(Boolean).forEach(g => genres.add(g))
     })
     return Array.from(genres).sort()
-  }, [])
+  }, [books])
 
   const uniqueLanguages = useMemo(() => {
     const langs = new Set<string>()
     books.forEach(b => { if (b.spraak) langs.add(b.spraak) })
     return Array.from(langs).sort()
-  }, [])
+  }, [books])
 
   const uniqueOwners = useMemo(() => {
     const owners = new Set<string>()
     books.forEach(b => { if (b.eier) owners.add(b.eier) })
     return Array.from(owners).sort()
-  }, [])
+  }, [books])
 
   const uniqueFormats = useMemo(() => {
     const formats = new Set<string>()
     books.forEach(b => { if (b.eierform) formats.add(b.eierform) })
     return Array.from(formats).sort()
-  }, [])
+  }, [books])
 
   const uniqueAuthors = useMemo(() => {
     const authors = new Set<string>()
     books.forEach(b => { if (b.forfatter) authors.add(b.forfatter) })
     return authors.size
-  }, [])
+  }, [books])
 
   return (
     <div className="min-h-screen bg-cream dark:bg-[#1a1a1a] transition-colors">
