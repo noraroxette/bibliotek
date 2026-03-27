@@ -2,7 +2,7 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
 
-const wb = XLSX.readFile('bibliotek-sn.xlsx');
+const wb = XLSX.readFile(path.join(__dirname, 'bibliotek-sn.xlsx'));
 const ws = wb.Sheets['Bibliotek'];
 const rawData = XLSX.utils.sheet_to_json(ws, { header: 1, raw: false, dateNF: 'yyyy-mm-dd' });
 
@@ -20,7 +20,7 @@ const books = rawData.slice(1).filter(row => row[0]).map(row => ({
   lestSara: row[9] === 'TRUE' || row[9] === true
 }));
 
-const outputPath = path.join(__dirname, 'app', 'src', 'data', 'books.json');
+const outputPath = path.join(__dirname, '..', 'src', 'data', 'books.json');
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, JSON.stringify(books, null, 2));
 console.log(`Wrote ${books.length} books to ${outputPath}`);
